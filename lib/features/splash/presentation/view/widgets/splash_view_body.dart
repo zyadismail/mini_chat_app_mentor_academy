@@ -13,11 +13,11 @@ class SplashViewBody extends StatefulWidget {
 }
 
 class _SplashViewBodyState extends State<SplashViewBody> {
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   navigateToNextScreen();
-  // }
+  @override
+  void initState() {
+    super.initState();
+    navigateToNextScreen();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,11 @@ class _SplashViewBodyState extends State<SplashViewBody> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const SizedBox(height: 300),
-          Image.asset(Assets.imagesLogo),
+          Image.asset(Assets.whatAppLogo,
+          width: 150,
+          height: 150,
+
+          ),
           const Text(
             'WhatsApp',
             style: Styles.textStyle24,
