@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mini_chat_app_mentor_academy/features/splash/presentation/view/splash_view.dart';
+import 'package:mini_chat_app_mentor_academy/features/splash/presentation/views/splash_view.dart';
 
 void main(){
   runApp(const MyApp());

@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:mini_chat_app_mentor_academy/core/utils/app_images.dart';
-import 'package:mini_chat_app_mentor_academy/core/utils/styles.dart';
+import 'package:mini_chat_app_mentor_academy/core/constants/app_images.dart';
+import 'package:mini_chat_app_mentor_academy/core/theme/styles.dart';
 import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/login_view.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -26,10 +26,10 @@ class _SplashViewBodyState extends State<SplashViewBody> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const SizedBox(height: 300),
-          Image.asset(Assets.whatAppLogo,
-          width: 150,
-          height: 150,
-
+          Image.asset(
+            Assets.imagesLogo,
+            width: 150,
+            height: 150,
           ),
           const Text(
             'WhatsApp',
