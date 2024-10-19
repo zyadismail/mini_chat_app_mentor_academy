@@ -31,14 +31,14 @@ class _SplashViewBodyState extends State<SplashViewBody> {
             width: 150,
             height: 150,
           ),
-          const Text(
+          Text(
             'WhatsApp',
             style: Styles.textStyle24,
           ),
           const Spacer(),
-          const Text(
+          Text(
             'The best Chat app of this century',
-            style: Styles.textStyle15,
+            style: Styles.textStyle10,
           ),
           const SizedBox(
             height: 120,
@@ -52,8 +52,12 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     Timer(
       const Duration(seconds: 3),
       () {
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (_) => const LoginView()));
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => const SigInView(),
+          ),
+        );
       },
     );
   }

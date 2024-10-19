@@ -4,12 +4,11 @@ import 'package:mini_chat_app_mentor_academy/features/splash/presentation/views/
 class SplashView extends StatelessWidget {
   const SplashView({super.key});
 
+  static const splashView = 'splash';
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body:  SplashViewBody(),
+      body: SplashViewBody(),
     );
   }
 }
-
-
