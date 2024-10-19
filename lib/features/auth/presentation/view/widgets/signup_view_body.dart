@@ -2,23 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:mini_chat_app_mentor_academy/core/widgets/custom_button.dart';
 import 'package:mini_chat_app_mentor_academy/core/widgets/password_fields.dart';
 import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/widgets/custom_textfield.dart';
-import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/widgets/dont_have_an_account.dart';
+import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/widgets/have_an_account.dart';
 import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/widgets/logo_widget.dart';
 import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/widgets/title.dart';
 
-class SigInViewBody extends StatefulWidget {
-  const SigInViewBody({super.key});
+class SignUpViewBody extends StatefulWidget {
+  const SignUpViewBody({super.key});
 
   @override
-  State<SigInViewBody> createState() => _SigInViewBodyState();
+  State<SignUpViewBody> createState() => _SignUpViewBodyState();
 }
 
 TextEditingController emailController = TextEditingController();
 TextEditingController passwordController = TextEditingController();
+TextEditingController nameController = TextEditingController();
+TextEditingController phoneController = TextEditingController();
 var formKey = GlobalKey<FormState>();
 
-class _SigInViewBodyState extends State<SigInViewBody> {
-  bool? isPasswordVisible;
+class _SignUpViewBodyState extends State<SignUpViewBody> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -33,17 +34,37 @@ class _SigInViewBodyState extends State<SigInViewBody> {
                 const LogoWidget(),
                 const SizedBox(height: 15),
                 const TitleWidget(
-                  text: 'Login to your account',
+                  text: 'Register to new account',
                 ),
                 const SizedBox(
                   height: 15,
                 ),
                 CustomTextField(
                   controller: emailController,
+                  label: 'enter your name',
+                  hintText: 'enter your name',
+                  keyboardType: TextInputType.name,
+                  prefix: const Icon(Icons.person),
+                ),
+                 const SizedBox(
+                  height: 15,
+                ),
+                CustomTextField(
+                  controller: emailController,
                   label: 'enter your email',
-                  hintText: 'your email',
+                  hintText: 'enter your email',
                   keyboardType: TextInputType.emailAddress,
                   prefix: const Icon(Icons.email),
+                ),
+                 const SizedBox(
+                  height: 15,
+                ),
+                CustomTextField(
+                  controller: phoneController,
+                  label: 'enter your phone',
+                  hintText: 'enter your phone',
+                  keyboardType: TextInputType.phone,
+                  prefix: const Icon(Icons.phone_android),
                 ),
                 const SizedBox(
                   height: 15,
@@ -51,6 +72,7 @@ class _SigInViewBodyState extends State<SigInViewBody> {
                 PasswrodFeild(
                   controller: passwordController,
                 ),
+             
                 const SizedBox(
                   height: 20,
                 ),
@@ -62,7 +84,7 @@ class _SigInViewBodyState extends State<SigInViewBody> {
                       // Show error message if form is not valid
                     }
                   },
-                  text: 'Log In',
+                  text: 'Sign Up',
                 ),
                 const SizedBox(height:30,),
                 const HaveAnAccount(),

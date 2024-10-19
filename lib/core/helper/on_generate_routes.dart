@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/login_view.dart';
+import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/sign_in_view.dart';
+import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/sign_up_view.dart';
 import 'package:mini_chat_app_mentor_academy/features/splash/presentation/views/splash_view.dart';
 
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -11,6 +12,10 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
     case SigInView.loginView:
       return MaterialPageRoute(
         builder: (context) => const SigInView(),
+      );
+    case SigUpView.signUp:
+      return MaterialPageRoute(
+        builder: (context) => const SigUpView(),
       );
 
     default:

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mini_chat_app_mentor_academy/core/helper/on_generate_routes.dart';
 import 'package:mini_chat_app_mentor_academy/features/splash/presentation/views/splash_view.dart';
 
 void main(){
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.interTextTheme(),
         useMaterial3: true,
       ),
-      home: const SplashView(),
+    onGenerateRoute: onGenerateRoute,
+      initialRoute: SplashView.splashView,
     );
   }
 }

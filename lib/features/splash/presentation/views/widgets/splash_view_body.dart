@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:mini_chat_app_mentor_academy/core/constants/app_images.dart';
 import 'package:mini_chat_app_mentor_academy/core/theme/styles.dart';
-import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/login_view.dart';
+import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/sign_in_view.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
