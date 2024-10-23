@@ -58,13 +58,12 @@ class _SigInViewBodyState extends State<SigInViewBody> {
                   onPressed: () {
                     if (formKey.currentState!.validate()) {
                       // Authenticate user using email and passwordController.text values
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (_) => const HomeView(),
-                        ),
-                      );
-                    } else {
-                      // Show error message if form is not valid
+                      Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const HomeView(),
+                          ),
+                          (route) => false);
                     }
                   },
                   text: 'Log In',
