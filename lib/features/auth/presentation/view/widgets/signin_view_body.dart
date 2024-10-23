@@ -5,6 +5,7 @@ import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/wid
 import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/widgets/dont_have_an_account.dart';
 import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/widgets/logo_widget.dart';
 import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/widgets/title.dart';
+import 'package:mini_chat_app_mentor_academy/features/home/presentation/view/home_view.dart';
 
 class SigInViewBody extends StatefulWidget {
   const SigInViewBody({super.key});
@@ -57,13 +58,20 @@ class _SigInViewBodyState extends State<SigInViewBody> {
                   onPressed: () {
                     if (formKey.currentState!.validate()) {
                       // Authenticate user using email and passwordController.text values
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => const HomeView(),
+                        ),
+                      );
                     } else {
                       // Show error message if form is not valid
                     }
                   },
                   text: 'Log In',
                 ),
-                const SizedBox(height:30,),
+                const SizedBox(
+                  height: 30,
+                ),
                 const DontHaveAnAccount(),
               ],
             ),
