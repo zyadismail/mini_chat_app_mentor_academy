@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mini_chat_app_mentor_academy/core/theme/app_color.dart';
 import 'package:mini_chat_app_mentor_academy/core/theme/styles.dart';
+import 'package:mini_chat_app_mentor_academy/features/chats/presentation/views/chat_details_view.dart';
 
 class ChatViewBody extends StatelessWidget {
   const ChatViewBody({super.key});
@@ -11,6 +12,14 @@ class ChatViewBody extends StatelessWidget {
       itemCount: 3,
       itemBuilder: (context, index) {
         return ListTile(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) =>  ChatDetailsView(),
+              ),
+            );
+          },
           contentPadding:
               const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
           leading: const CircleAvatar(
@@ -29,7 +38,9 @@ class ChatViewBody extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Text('12:00 PM'),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               Badge(
                 backgroundColor: AppColors.secondryColor,
                 padding: EdgeInsets.symmetric(horizontal: 12),

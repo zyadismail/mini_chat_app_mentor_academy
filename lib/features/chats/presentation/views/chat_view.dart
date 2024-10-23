@@ -12,12 +12,11 @@ class ChatView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBar(),
-      floatingActionButton:  FloatingActionButton(
+      floatingActionButton: FloatingActionButton(
         backgroundColor: AppColors.secondryColor,
         child: const Icon(Icons.message),
-        onPressed: (){
-
-      }),
+        onPressed: () {},
+      ),
       body: const ChatViewBody(),
     );
   }
