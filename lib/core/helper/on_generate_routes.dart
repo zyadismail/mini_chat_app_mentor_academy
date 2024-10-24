@@ -3,6 +3,7 @@ import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/sig
 import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/sign_up_view.dart';
 import 'package:mini_chat_app_mentor_academy/features/chats/presentation/views/chat_view.dart';
 import 'package:mini_chat_app_mentor_academy/features/home/presentation/view/home_view.dart';
+import 'package:mini_chat_app_mentor_academy/features/profile/presentation/view/profile_view.dart';
 import 'package:mini_chat_app_mentor_academy/features/splash/presentation/views/splash_view.dart';
 import 'package:mini_chat_app_mentor_academy/features/status/status_view.dart';
 
@@ -31,6 +32,10 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
     case StatusView.status:
       return MaterialPageRoute(
         builder: (context) => const StatusView(),
+      );
+    case ProfileView.profile:
+      return MaterialPageRoute(
+        builder: (context) => const ProfileView(),
       );
 
     default:

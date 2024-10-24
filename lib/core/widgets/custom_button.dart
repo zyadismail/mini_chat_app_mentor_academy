@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:mini_chat_app_mentor_academy/core/theme/app_color.dart';
-import 'package:mini_chat_app_mentor_academy/core/theme/styles.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, required this.onPressed, required this.text});
+  const CustomButton({super.key, required this.onPressed, required this.text, required this.color});
 
   final VoidCallback onPressed;
-  final String text;
+  final Widget text;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +18,10 @@ class CustomButton extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(24),
           ),
-          backgroundColor: AppColors.primaryColor,
+          backgroundColor: color,
         ),
         onPressed: onPressed,
-        child: Text(
-          text,
-          style: Styles.textStyle24,
-        ),
+        child: text
       ),
     );
   }

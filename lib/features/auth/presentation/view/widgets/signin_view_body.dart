@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mini_chat_app_mentor_academy/core/theme/app_color.dart';
+import 'package:mini_chat_app_mentor_academy/core/theme/styles.dart';
 import 'package:mini_chat_app_mentor_academy/core/widgets/custom_button.dart';
 import 'package:mini_chat_app_mentor_academy/core/widgets/password_fields.dart';
 import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/widgets/custom_textfield.dart';
@@ -55,6 +57,7 @@ class _SigInViewBodyState extends State<SigInViewBody> {
                   height: 20,
                 ),
                 CustomButton(
+                  color: AppColors.primaryColor,
                   onPressed: () {
                     if (formKey.currentState!.validate()) {
                       // Authenticate user using email and passwordController.text values
@@ -66,7 +69,7 @@ class _SigInViewBodyState extends State<SigInViewBody> {
                           (route) => false);
                     }
                   },
-                  text: 'Log In',
+                  text:  Text('Log In', style: Styles.textStyle24,),
                 ),
                 const SizedBox(
                   height: 30,
