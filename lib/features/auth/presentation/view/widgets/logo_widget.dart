@@ -9,7 +9,7 @@ class LogoWidget extends StatelessWidget {
     return Container(
       alignment: Alignment.topCenter,
       child: Image.asset(
-        Assets.imagesLogo,
+        Assets.imagesLogo1,
         width: 300,
         height: 250,
       ),

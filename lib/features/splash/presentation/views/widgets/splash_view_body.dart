@@ -27,7 +27,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
         children: [
           const SizedBox(height: 300),
           Image.asset(
-            Assets.imagesLogo,
+            Assets.imagesLogo1,
             width: 150,
             height: 150,
           ),

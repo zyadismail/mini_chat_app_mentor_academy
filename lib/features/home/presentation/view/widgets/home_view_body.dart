@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mini_chat_app_mentor_academy/core/theme/app_color.dart';
 import 'package:mini_chat_app_mentor_academy/features/chats/presentation/views/chat_view.dart';
+import 'package:mini_chat_app_mentor_academy/features/status/status_view.dart';
 
 class HomeViewBody extends StatefulWidget {
   const HomeViewBody({super.key});
@@ -15,7 +16,7 @@ class _HomeViewBodyState extends State<HomeViewBody>
 
   List<Widget> screens = [
     const ChatView(),
-    const Placeholder(),
+    const StatusView(),
     const Placeholder(),
     // StatusView(),
     // CallsView(),

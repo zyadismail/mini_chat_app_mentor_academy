@@ -2,7 +2,7 @@
 import 'package:mini_chat_app_mentor_academy/core/theme/styles.dart';
 
 AppBar appBar() => AppBar(
-       
+       elevation: 0.0,
         title: Text(
           'Whats App',
           style: Styles.textStyle24,
