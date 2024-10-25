@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mini_chat_app_mentor_academy/core/theme/styles.dart';
 import 'package:mini_chat_app_mentor_academy/features/profile/presentation/view/profile_view.dart';
 
-AppBar appBar() => AppBar(
+AppBar buildAppBar() => AppBar(
       elevation: 0.0,
       title: Text(
         'Whats App',

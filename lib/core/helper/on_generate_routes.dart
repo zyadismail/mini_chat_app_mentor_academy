@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/sign_in_view.dart';
 import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/sign_up_view.dart';
+import 'package:mini_chat_app_mentor_academy/features/calls/presentation/view/calls_view.dart';
 import 'package:mini_chat_app_mentor_academy/features/chats/presentation/views/chat_view.dart';
 import 'package:mini_chat_app_mentor_academy/features/home/presentation/view/home_view.dart';
 import 'package:mini_chat_app_mentor_academy/features/profile/presentation/view/profile_view.dart';
@@ -34,6 +35,10 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
         builder: (context) => const StatusView(),
       );
     case ProfileView.profile:
+      return MaterialPageRoute(
+        builder: (context) => const ProfileView(),
+      );
+    case CallsView.calls:
       return MaterialPageRoute(
         builder: (context) => const ProfileView(),
       );

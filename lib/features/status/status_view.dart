@@ -9,7 +9,7 @@ class StatusView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: appBar(),
+      appBar: buildAppBar(),
       body: const StatusViewBody(),
     );
   }

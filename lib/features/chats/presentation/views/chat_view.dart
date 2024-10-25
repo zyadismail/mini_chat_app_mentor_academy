@@ -11,7 +11,7 @@ class ChatView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar(),
+      appBar: buildAppBar(),
       floatingActionButton: FloatingActionButton(
         backgroundColor: AppColors.secondryColor,
         child: const Icon(Icons.message),
