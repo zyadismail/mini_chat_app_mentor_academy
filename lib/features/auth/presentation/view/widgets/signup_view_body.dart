@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mini_chat_app_mentor_academy/core/theme/app_color.dart';
 import 'package:mini_chat_app_mentor_academy/core/theme/styles.dart';
 import 'package:mini_chat_app_mentor_academy/core/widgets/custom_button.dart';
 import 'package:mini_chat_app_mentor_academy/core/widgets/password_fields.dart';
-import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/widgets/custom_textfield.dart';
+import 'package:mini_chat_app_mentor_academy/core/widgets/custom_textfield.dart';
 import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/widgets/have_an_account.dart';
 import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/widgets/logo_widget.dart';
 import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/widgets/title.dart';
+import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view_model/sign_up_cubit/sign_up_cubit.dart';
 
 class SignUpViewBody extends StatefulWidget {
   const SignUpViewBody({super.key});
@@ -19,7 +21,7 @@ TextEditingController emailController = TextEditingController();
 TextEditingController passwordController = TextEditingController();
 TextEditingController nameController = TextEditingController();
 TextEditingController phoneController = TextEditingController();
-var formKey = GlobalKey<FormState>();
+var formKey1 = GlobalKey<FormState>();
 
 class _SignUpViewBodyState extends State<SignUpViewBody> {
   @override
@@ -28,7 +30,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
       padding: const EdgeInsets.all(20.0),
       child: Center(
         child: Form(
-          key: formKey,
+          key: formKey1,
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -42,7 +44,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                   height: 15,
                 ),
                 CustomTextField(
-                  controller: emailController,
+                  controller: nameController,
                   label: 'enter your name',
                   hintText: 'enter your name',
                   keyboardType: TextInputType.name,
@@ -80,8 +82,14 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                 CustomButton(
                   color: AppColors.primaryColor,
                   onPressed: () {
-                    if (formKey.currentState!.validate()) {
+                    if (formKey1.currentState!.validate()) {
                       // Authenticate user using email and passwordController.text values
+                      context.read<SignUpCubit>().sigUp(
+                            email: emailController.text,
+                            password: passwordController.text,
+                            name: nameController.text,
+                            phone: phoneController.text,
+                          );
                     } else {
                       // Show error message if form is not valid
                     }

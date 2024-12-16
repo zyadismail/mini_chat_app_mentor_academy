@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:mini_chat_app_mentor_academy/core/constants/app_images.dart';
 import 'package:mini_chat_app_mentor_academy/core/theme/styles.dart';
 import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/sign_in_view.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -25,11 +26,11 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const SizedBox(height: 300),
+           SizedBox(height: 300.h),
           Image.asset(
             Assets.imagesLogo1,
-            width: 150,
-            height: 150,
+            width: 150.w,
+            height: 150.h,
           ),
           Text(
             'WhatsApp',
@@ -40,8 +41,8 @@ class _SplashViewBodyState extends State<SplashViewBody> {
             'The best Chat app of this century',
             style: Styles.textStyle10,
           ),
-          const SizedBox(
-            height: 120,
+           SizedBox(
+            height: 120.h,
           )
         ],
       ),
@@ -52,12 +53,10 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     Timer(
       const Duration(seconds: 3),
       () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (_) => const SigInView(),
-          ),
-        );
+         Navigator.pushReplacementNamed(
+            context,
+            SigInView.loginView,
+          );
       },
     );
   }

@@ -1,12 +1,11 @@
-
 import 'package:flutter/material.dart';
 import 'package:mini_chat_app_mentor_academy/core/theme/styles.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ViewedUpdates extends StatelessWidget {
   const ViewedUpdates({
     super.key,
   });
-
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -21,7 +20,7 @@ class ViewedUpdates extends StatelessWidget {
             ),
             title: Text(
               'ziad ismail',
-              style: Styles.textStyle24.copyWith(fontSize: 20),
+              style: Styles.textStyle24.copyWith(fontSize: 20.sp),
             ),
             subtitle: Text(
               'Today, 12:00 PM',

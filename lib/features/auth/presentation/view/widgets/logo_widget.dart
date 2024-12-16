@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mini_chat_app_mentor_academy/core/constants/app_images.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LogoWidget extends StatelessWidget {
   const LogoWidget({super.key});
@@ -10,8 +11,8 @@ class LogoWidget extends StatelessWidget {
       alignment: Alignment.topCenter,
       child: Image.asset(
         Assets.imagesLogo1,
-        width: 300,
-        height: 250,
+        width: 300.w,
+        height: 250.h,
       ),
     );
   }

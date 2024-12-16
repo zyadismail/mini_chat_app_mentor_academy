@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/widgets/custom_textfield.dart';
+import 'package:mini_chat_app_mentor_academy/core/widgets/custom_textfield.dart';
 
 class PasswrodFeild extends StatefulWidget {
   const PasswrodFeild({

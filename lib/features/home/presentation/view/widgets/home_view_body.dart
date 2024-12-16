@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mini_chat_app_mentor_academy/core/theme/app_color.dart';
 import 'package:mini_chat_app_mentor_academy/features/calls/presentation/view/calls_view.dart';
 import 'package:mini_chat_app_mentor_academy/features/chats/presentation/views/chat_view.dart';
+import 'package:mini_chat_app_mentor_academy/features/groups/presentation/views/groups_view.dart';
 import 'package:mini_chat_app_mentor_academy/features/status/status_view.dart';
 
 class HomeViewBody extends StatefulWidget {
@@ -19,14 +20,15 @@ class _HomeViewBodyState extends State<HomeViewBody>
     const ChatView(),
     const StatusView(),
     const CallsView(),
-    // StatusView(),
-    // CallsView(),
+     GroupsView(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        
+        selectedItemColor: AppColors.secondryColor,
         currentIndex: _currentIdx,
         onTap: (index) {
           setState(() {
@@ -54,6 +56,13 @@ class _HomeViewBodyState extends State<HomeViewBody>
               color: AppColors.primaryColor,
             ),
             label: "Calls",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.group,
+              color: AppColors.primaryColor,
+            ),
+            label: "Groups",
           ),
         ],
       ),

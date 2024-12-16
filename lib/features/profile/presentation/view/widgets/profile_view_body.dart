@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mini_chat_app_mentor_academy/core/theme/styles.dart';
-import 'package:mini_chat_app_mentor_academy/features/auth/presentation/view/widgets/custom_textfield.dart';
+import 'package:mini_chat_app_mentor_academy/core/widgets/custom_textfield.dart';
 import 'package:mini_chat_app_mentor_academy/features/profile/presentation/view/widgets/button_widget.dart';
 import 'package:mini_chat_app_mentor_academy/features/profile/presentation/view/widgets/edit_profile.dart';
 
@@ -14,16 +15,22 @@ class ProfileViewBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Divider(),
-        const SizedBox(
-          height: 20,
+        SizedBox(
+          height: 20.h,
         ),
         const EditPhoto(),
-        const SizedBox(
-          height: 20,
+        SizedBox(
+          height: 20.h,
         ),
         const Divider(),
-        const SizedBox(
-          height: 50,
+         Center(
+          child:  Text(
+            '',
+            style: Styles.textStyle24,
+          ),
+        ),
+        SizedBox(
+          height: 50.h,
         ),
         Padding(
           padding: const EdgeInsets.all(10.0),
@@ -43,8 +50,8 @@ class ProfileViewBody extends StatelessWidget {
             controller: nameController,
           ),
         ),
-        const SizedBox(
-          height: 10,
+        SizedBox(
+          height: 10.h,
         ),
         Padding(
           padding: const EdgeInsets.all(10.0),
@@ -64,8 +71,8 @@ class ProfileViewBody extends StatelessWidget {
             controller: nameController,
           ),
         ),
-        const SizedBox(
-          height: 30,
+        SizedBox(
+          height: 30.h,
         ),
         const ButtonWidget(),
       ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class EditPhoto extends StatelessWidget {
   const EditPhoto({
@@ -20,20 +21,20 @@ class EditPhoto extends StatelessWidget {
             bottom: 0,
             right: 0,
             child: Container(
-              height: 30,
-              width: 30,
+              height: 30.h,
+              width: 30.w,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: Colors.green,
                 border: Border.all(
                   color: Colors.white,
-                  width: 2,
+                  width: 2.w,
                 ),
               ),
-              child: const Icon(
+              child:  Icon(
                 Icons.edit,
                 color: Colors.white,
-                size: 20,
+                size: 20.sp,
               ),
             ),
           ),

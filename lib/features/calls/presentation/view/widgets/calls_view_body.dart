@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mini_chat_app_mentor_academy/core/theme/styles.dart';
 
 class CallsViewBody extends StatelessWidget {
@@ -10,7 +11,7 @@ class CallsViewBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
          Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 10),
+          padding:  EdgeInsets.symmetric(horizontal: 30.0.h, vertical: 10.w),
           child: Text(
             'Recent',
             style: Styles.textStyle10.copyWith(color: Colors.grey),
@@ -19,17 +20,17 @@ class CallsViewBody extends StatelessWidget {
         Expanded(
             child: ListView.separated(
             separatorBuilder: (context, index) {
-            return  const SizedBox(height: 10,);
+            return   SizedBox(height: 10.h,);
             },
           itemCount: 10,
           itemBuilder: (context, indeex) {
             return  ListTile(
-              leading: const CircleAvatar(
+              leading:  const CircleAvatar(
                 radius: 30,
               ),
               title: Text(
                 'ziad',
-                style: Styles.textStyle24.copyWith(fontSize: 20),
+                style: Styles.textStyle24.copyWith(fontSize: 20.sp),
               ),
               subtitle: const Text('Today, 10:30 AM'),
               trailing: const Icon(Icons.call),
